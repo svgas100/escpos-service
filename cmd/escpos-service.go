@@ -6,17 +6,19 @@ import (
 	"strconv"
 
 	command "github.com/svgas100/escpos-service/internal/commands"
+	usb "github.com/svgas100/escpos-service/internal/usb"
 )
 
 func main() {
+	usb.TestUsb()
 
-	testESCPOSCommand(command.PrintAndLineFeedESCPOSCommand{})
+	/*testESCPOSCommand(command.PrintAndLineFeedESCPOSCommand{})
 	testESCPOSCommand(command.PrintAndCarriageReturnESCPOSCommand{})
 	testESCPOSCommand(command.SelectDefaultLineSpacingESCPOSCommand{})
 	err := testESCPOSParameterisedCommand(command.PrintAndFeedPaperESCPOSCommand{Param_n: 252})
 	if err != nil {
 		fmt.Println(err)
-	}
+	}*/
 }
 
 func testESCPOSCommand(command command.ESCPOSCommand) {
