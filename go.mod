@@ -1,3 +1,3 @@
-module github.com/YOUR-USER-OR-ORG-NAME/YOUR-REPO-NAME
+module github.com/svgas100/escpos-service
 
-go 1.14
+go 1.13
